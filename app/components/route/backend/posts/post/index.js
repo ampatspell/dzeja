@@ -15,7 +15,7 @@ export default class RouteBackendPostsPostIndexComponent extends Component {
 
   @action
   onEdit() {
-    console.log('onEdit');
+    this.router.transitionTo('backend.posts.post.edit', this.args.model.id);
   }
 
 }

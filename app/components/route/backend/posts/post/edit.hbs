@@ -1,0 +1,13 @@
+<div class="route-backend-posts-post-edit">
+
+  <Block::Backend::Header @title="Edit Post" as |Header|>
+    <Header.Details @value={{@model.typeName}}/>
+    <Header.Actions>
+      <Input::Button::Confirm @class="action" @value="Cancel" @confirmation="Cancel, sure?" @onClick={{this.onCancel}}/>
+      <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
+    </Header.Actions>
+  </Block::Backend::Header>
+
+  <Block::Backend::Post::Edit @post={{@model}} @onUpdate={{this.onUpdate}}/>
+
+</div>

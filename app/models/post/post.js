@@ -29,7 +29,9 @@ export default class Post extends EmberObject {
     await this.doc.save();
   }
 
-  //
+  async reload() {
+    await this.doc.reload();
+  }
 
   async delete() {
     await this.doc.delete();
