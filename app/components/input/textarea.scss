@@ -1,0 +1,5 @@
+.input-textarea {
+  @include input();
+  padding: 9px;
+  height: 100%;
+}

@@ -19,4 +19,14 @@ export default class Post extends EmberObject {
   async load() {
   }
 
+  //
+
+  update(key, value) {
+    this.doc.data[key] = value;
+  }
+
+  async save() {
+    await this.doc.save();
+  }
+
 }

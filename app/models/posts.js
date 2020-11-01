@@ -28,4 +28,12 @@ export default class Posts extends EmberObject {
     return this.models.find(model => model.id === id);
   }
 
+  buildPost(type) {
+    let doc = this.collection.doc().new({
+      type,
+      createdAt: this.store.serverTimestamp
+    });
+    return this.store.models.create(`post/${type}`, { doc });
+  }
+
 }

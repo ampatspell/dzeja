@@ -1,0 +1,5 @@
+<div class={{class "block-backend-post-edit" type=@post.type}}>
+  <div class="content">
+    {{component (concat 'block/backend/post/edit/' @post.type) post=@post onUpdate=@onUpdate}}
+  </div>
+</div>

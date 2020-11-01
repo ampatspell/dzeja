@@ -1,0 +1,20 @@
+.route-backend-posts-new {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  > .definitions {
+    > .title {
+      padding: 15px;
+      font-weight: 600;
+    }
+    > .definition {
+      transition: background-color 0.3s ease-in-out;
+      padding: 15px;
+      &:hover {
+        background: fade-out(#000, 0.97);
+      }
+    }
+  }
+
+}
