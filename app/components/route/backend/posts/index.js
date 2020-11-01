@@ -12,4 +12,8 @@ export default class RouteBackendPostsIndexComponent extends Component {
     this.router.transitionTo('backend.posts.post', post.id);
   }
 
+  @action
+  onAdd() {
+  }
+
 }

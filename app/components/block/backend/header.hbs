@@ -1,6 +1,7 @@
-<div class="block-backend-header">
+<div class={{class "block-backend-header" @class}}>
   <div class="title">{{@title}}</div>
   {{yield (hash
-    Details=(component 'block/backend/header/details')
+    Details=(component 'block/div' class="details")
+    Actions=(component 'block/div' class="actions")
   )}}
 </div>

@@ -1,0 +1,5 @@
+{{#if this.confiration}}
+  <Input::Button @class={{@class}} @value={{@confirmation}} @onClick={{this.confirmed}}/>
+{{else}}
+  <Input::Button @class={{@class}} @value={{@value}} @onClick={{this.confirm}}/>
+{{/if}}

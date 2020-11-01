@@ -1,7 +1,11 @@
 <div class="route-backend-posts-post-index">
 
-  <Block::Backend::Header @title={{concat @model.typeName}} as |Header|>
+  <Block::Backend::Header @class="header" @title={{concat @model.typeName}} as |Header|>
     <Header.Details @value={{concat 'Created at ' (timestamp @model.createdAt)}}/>
+    <Header.Actions>
+      <Input::Button::Confirm @class="action" @value="Delete" @confirmation="Delete, sure?" @onClick={{this.onDelete}}/>
+      <Input::Button @class="action" @value="Edit" @onClick={{this.onEdit}}/>
+    </Header.Actions>
   </Block::Backend::Header>
 
   <Block::Backend::Post::Show @post={{@model}}/>

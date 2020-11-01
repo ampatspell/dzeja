@@ -1,10 +1,32 @@
 .block-backend-header {
   padding: 15px;
   border-bottom: 1px solid fade-out(#000, 0.9);
+
+  display: grid;
+  grid-template: "title               actions"
+                 "details             actions" /
+                  minmax(100px, auto) 1fr;
+  column-gap: 5px;
+
   > .title {
+    grid-area: title;
     font-weight: 600;
   }
   > .details {
+    grid-area: details;
     font-size: $font-size-smaller;
+  }
+  > .actions {
+    grid-area: actions;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    > .action {
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }

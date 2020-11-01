@@ -1,6 +1,10 @@
 <div class="route-backend-posts-index">
 
-  <Block::Backend::Header @title="Posts"/>
+  <Block::Backend::Header @title="Posts" as |Header|>
+    <Header.Actions>
+      <Input::Button @class="action" @value="New post" @onClick={{this.onAdd}}/>
+    </Header.Actions>
+  </Block::Backend::Header>
 
   <Block::Backend::Posts::List @class="posts" @posts={{@model.models}} @onSelected={{this.onSelected}}/>
 
