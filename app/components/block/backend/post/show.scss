@@ -1,0 +1,13 @@
+.block-backend-post-show {
+  > .content {
+    padding: 15px;
+  }
+  &.type-text {
+    > .content {
+      > .title {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

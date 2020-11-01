@@ -1,3 +1,9 @@
 <div class="route-backend-posts-post-index">
-  {{@model}}
+
+  <Block::Backend::Header @title={{concat @model.typeName}} as |Header|>
+    <Header.Details @value={{concat 'Created at ' (timestamp @model.createdAt)}}/>
+  </Block::Backend::Header>
+
+  <Block::Backend::Post::Show @post={{@model}}/>
+
 </div>

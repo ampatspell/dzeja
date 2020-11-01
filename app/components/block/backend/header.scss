@@ -1,0 +1,10 @@
+.block-backend-header {
+  padding: 15px;
+  border-bottom: 1px solid fade-out(#000, 0.9);
+  > .title {
+    font-weight: 600;
+  }
+  > .details {
+    font-size: $font-size-smaller;
+  }
+}

@@ -2,6 +2,8 @@ import Post, { data } from './post';
 
 export default class TextPost extends Post {
 
+  typeName = "Text Post"
+
   @data('title')
   title
 
