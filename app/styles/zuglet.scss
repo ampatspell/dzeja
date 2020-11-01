@@ -1,6 +1,11 @@
 .zuglet-stats {
-  font-family: Menlo, Monaco;
-  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: fade-out(#fff, 0.5);
+  padding: 10px;
+  font-family: $font-family;
+  font-size: $font-size-smaller;
   > .section {
     margin-bottom: 10px;
     &:last-child {

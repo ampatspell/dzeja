@@ -8,14 +8,10 @@ export default class IndexRoute extends Route {
   @service
   store
 
-  async model() {
-    return this.store.doc('messages/first').new({
-      message: 'To whom it may concern: It is springtime. It is late afternoon.'
-    });
+  model() {
   }
 
-  async load(doc) {
-    return await doc.save();
+  async load() {
   }
 
 }
