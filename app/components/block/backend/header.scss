@@ -6,6 +6,7 @@
   grid-template: "title               actions" 1fr
                  "details             actions" minmax(0, auto) /
                   minmax(100px, auto) 1fr;
+
   column-gap: 5px;
 
   > .title {
