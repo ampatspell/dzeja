@@ -6,9 +6,12 @@
     > .content {
       > .title {
         font-weight: 600;
-        margin-bottom: 15px;
+      }
+      > .author {
+        font-size: $font-size-smaller;
       }
       > .body {
+        margin-top: 15px;
         @include markdown();
       }
     }

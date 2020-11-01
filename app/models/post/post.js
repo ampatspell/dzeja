@@ -16,6 +16,9 @@ export default class Post extends EmberObject {
   @data('createdAt')
   createdAt
 
+  @data('author')
+  author
+
   async load() {
   }
 

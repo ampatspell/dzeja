@@ -1,4 +1,7 @@
 <div class="title">{{@post.title}}</div>
+{{#if @post.author}}
+  <div class="author">{{@post.author}}</div>
+{{/if}}
 <div class="body">
   {{html-safe @post.html}}
 </div>

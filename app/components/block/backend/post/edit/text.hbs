@@ -1,4 +1,8 @@
 <div class="row">
+  <div class="label">Author</div>
+  <Input::Text @class="input" @value={{@post.author}} @onUpdate={{fn @onUpdate 'author'}}/>
+</div>
+<div class="row">
   <div class="label">Title</div>
   <Input::Text @class="input" @value={{@post.title}} @onUpdate={{fn @onUpdate 'title'}}/>
 </div>
