@@ -25,3 +25,15 @@
   line-height: 1;
   outline: none;
 }
+
+@mixin markdown() {
+  p {
+    margin-bottom: 10px;
+  }
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: 600;
+  }
+}

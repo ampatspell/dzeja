@@ -1,4 +1,5 @@
 import Post, { data } from './post';
+import { toHTML } from '../../utils/remark';
 
 export default class TextPost extends Post {
 
@@ -10,8 +11,16 @@ export default class TextPost extends Post {
   @data('body')
   body
 
+  @data('html')
+  html
+
   get _title() {
     return this.title || 'Untitled';
+  }
+
+  async render() {
+    let html = await toHTML(this.body);
+    this.update('html', html);
   }
 
   get description() {

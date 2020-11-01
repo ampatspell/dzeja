@@ -17,4 +17,6 @@ Router.map(function() {
     });
   });
 
+  this.route('dev');
+
 });
