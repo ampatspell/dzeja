@@ -5,8 +5,8 @@
     <Block::Backend::Header @title="New Post" as |Header|>
       <Header.Details @value={{@model.definition.label}}/>
       <Header.Actions>
-        <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
         <Input::Button @class="action" @value="Cancel" @onClick={{this.onCancel}}/>
+        <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
       </Header.Actions>
     </Block::Backend::Header>
 
@@ -14,7 +14,11 @@
 
   {{else}}
 
-    <Block::Backend::Header @title="New Post"/>
+    <Block::Backend::Header @title="New Post" as |Header|>
+      <Header.Actions>
+        <Input::Button @class="action" @value="Cancel" @onClick={{this.onCancel}}/>
+      </Header.Actions>
+    </Block::Backend::Header>
 
     <div class="definitions">
       <div class="title">Select post type</div>

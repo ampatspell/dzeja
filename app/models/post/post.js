@@ -29,4 +29,10 @@ export default class Post extends EmberObject {
     await this.doc.save();
   }
 
+  //
+
+  async delete() {
+    await this.doc.delete();
+  }
+
 }
