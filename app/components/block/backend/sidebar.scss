@@ -1,25 +1,37 @@
 .block-backend-sidebar {
+  $item: 44px;
   flex: 1;
-  width: 30px;
-  background: fade-out(#000, 0.97);
+  width: $item;
+  background: fade-out(#000, 0.2);
   border-right: 1px solid fade-out(#000, 0.9);
   display: flex;
   flex-direction: column;
+  @include noselect();
   > .content {
     flex: 1;
-  }
-  > .footer {
-    > .stats {
-      @include noselect();
-      height: 30px;
-      line-height: 30px;
-      font-size: 28px;
-      padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4px 0 0; // icons
+    > .item {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: $item;
+      width: $item;
+      > .icon {
+        font-size: 15px;
+      }
+    }
+    > .delimiter {
+      flex: 1;
     }
   }
   > .stats {
     position: fixed;
     bottom: 0;
-    left: 30px;
+    left: $item;
   }
 }

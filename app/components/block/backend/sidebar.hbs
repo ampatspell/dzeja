@@ -1,8 +1,8 @@
 <div class="block-backend-sidebar">
   <div class="content">
-  </div>
-  <div class="footer">
-    <div class="stats" role="button" {{on "click" this.toggleStats}}>×</div>
+    <Block::Backend::Sidebar::Item @icon="archive" @onClick={{fn this.route "backend.posts"}}/>
+    <div class="delimiter"></div>
+    <Block::Backend::Sidebar::Item @icon="laptop-code" @onClick={{this.toggleStats}}/>
   </div>
   {{#if this.stats}}
     <Zuglet::Stats @class="stats" @stores={{true}}/>
