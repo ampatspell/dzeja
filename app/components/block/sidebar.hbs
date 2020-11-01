@@ -1,0 +1,10 @@
+<div class="block-sidebar">
+  <div class="content">
+  </div>
+  <div class="footer">
+    <div class="stats" role="button" {{on "click" this.toggleStats}}>×</div>
+  </div>
+  {{#if this.stats}}
+    <Zuglet::Stats @class="stats" @stores={{true}}/>
+  {{/if}}
+</div>
