@@ -10,10 +10,15 @@ export default class TextPost extends Post {
   @data('body')
   body
 
+  get _title() {
+    return this.title || 'Untitled';
+  }
+
   get description() {
+    let { _title, body } = this;
     return [
-      { type: 'strong', value: this.title },
-      { value: this.body }
+      { type: 'strong', value: _title },
+      { value: body }
     ];
   }
 

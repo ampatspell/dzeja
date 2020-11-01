@@ -7,13 +7,13 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        margin-bottom: 5px;
         &.type-strong {
           font-weight: 600;
         }
       }
     }
     > .details {
-      margin-top: 5px;
       font-size: $font-size-smaller;
     }
     transition: background-color 0.3s ease-in-out;
