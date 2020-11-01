@@ -4,6 +4,9 @@
     border-bottom: 1px solid fade-out(#000, 0.9);
     > .description {
       > .line {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         &.type-strong {
           font-weight: 600;
         }
