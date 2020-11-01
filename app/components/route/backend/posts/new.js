@@ -25,7 +25,7 @@ export default class RouteBackendPostsNewComponent extends Component {
 
   @action
   onCancel() {
-    this.router.tansitionTo('backend.posts');
+    this.router.transitionTo('backend.posts');
   }
 
 }
