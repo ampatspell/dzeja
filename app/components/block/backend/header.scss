@@ -1,14 +1,17 @@
 .block-backend-header {
-  padding: 15px;
+  padding: 10px 15px;
   border-bottom: 1px solid fade-out(#000, 0.9);
 
   display: grid;
-  grid-template: "title               actions"
-                 "details             actions" /
+  grid-template: "title               actions" 1fr
+                 "details             actions" minmax(0, auto) /
                   minmax(100px, auto) 1fr;
   column-gap: 5px;
 
   > .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     grid-area: title;
     font-weight: 600;
   }
