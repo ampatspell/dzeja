@@ -1,0 +1,10 @@
+<div class="post" role="button" {{on "click" @onSelected}}>
+  <div class="description">
+    {{#each @post.description as |line|}}
+      {{#if line.value}}
+        <div class={{class "line" type=line.type}}>{{line.value}}</div>
+      {{/if}}
+    {{/each}}
+  </div>
+  <div class="details">Created at {{timestamp @post.createdAt}}</div>
+</div>

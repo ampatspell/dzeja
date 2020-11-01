@@ -1,3 +1,9 @@
 <div class="route-backend-posts-index">
-  posts/index
+
+  <div class="header">
+    <div class="title">Posts</div>
+  </div>
+
+  <Block::Backend::Posts::List @class="posts" @posts={{@model.models}} @onSelected={{this.onSelected}}/>
+
 </div>

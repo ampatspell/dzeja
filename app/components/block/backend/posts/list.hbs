@@ -1,0 +1,7 @@
+  <div class={{class "block-backend-posts-list" @class}}>
+    {{#each @posts as |post|}}
+      <Block::Backend::Posts::List::Post @post={{post}} @onSelected={{fn @onSelected post}}/>
+    {{else}}
+      <div class="placeholder">No posts here yet</div>
+    {{/each}}
+  </div>
