@@ -10,6 +10,9 @@ export default class Post extends EmberObject {
   @reads('doc.id')
   id
 
+  @reads('doc.isDirty')
+  isDirty
+
   @data('type')
   type
 
