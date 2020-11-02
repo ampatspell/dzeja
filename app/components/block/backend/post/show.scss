@@ -35,10 +35,10 @@
             margin-right: 0;
           }
           > .author {
-            font-weight: 600;
+            font-size: $font-size-smaller;
           }
           > .body {
-            margin-top: 15px;
+            margin-top: 10px;
             @include markdown();
           }
         }
