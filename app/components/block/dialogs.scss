@@ -44,6 +44,9 @@
         &:first-child {
           margin-left: 0;
         }
+        &.destructive {
+          background: #D44D5C;
+        }
       }
     }
   }

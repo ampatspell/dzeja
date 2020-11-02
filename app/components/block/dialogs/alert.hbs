@@ -2,6 +2,6 @@
   <div class="message">{{this.props.message}}</div>
   <div class="actions">
     <Input::Button @class="action" @value={{this.props.reject}} @onClick={{this.reject}}/>
-    <Input::Button @class="action" @value={{this.props.resolve}} @onClick={{this.resolve}}/>
+    <Input::Button @class="action destructive" @value={{this.props.resolve}} @onClick={{this.resolve}}/>
   </div>
 </div>

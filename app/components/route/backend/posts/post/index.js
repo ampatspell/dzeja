@@ -7,8 +7,15 @@ export default class RouteBackendPostsPostIndexComponent extends Component {
   @service
   router
 
+  @service
+  dialogs
+
   @action
   async onDelete() {
+    let confirmed = await this.dialogs.alert('Are you sure you want to delete this post?', 'Delete this post', 'Cancel');
+    if(!confirmed) {
+      return;
+    }
     this.args.model.delete();
     this.router.transitionTo('backend.posts');
   }

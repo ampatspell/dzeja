@@ -4,11 +4,7 @@
     <Header.Details @value={{@model.typeName}}/>
     {{#unless this.isBusy}}
       <Header.Actions>
-        {{#if @model.isDirty}}
-          <Input::Button::Confirm @class="action" @value="Cancel" @confirmation="Cancel, sure?" @onClick={{this.onCancel}}/>
-        {{else}}
-          <Input::Button @class="action" @value="Back" @onClick={{this.onCancel}}/>
-        {{/if}}
+        <Input::Button @class="action" @value="Cancel" @onClick={{this.onCancel}}/>
         <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
       </Header.Actions>
     {{/unless}}

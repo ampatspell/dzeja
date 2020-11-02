@@ -5,7 +5,7 @@
     <Block::Backend::Header @title="New Post" as |Header|>
       <Header.Details @value={{@model.definition.label}}/>
       <Header.Actions>
-        <Input::Button::Confirm @class="action" @value="Cancel" @confirmation="Cancel, sure?" @onClick={{this.onCancel}}/>
+        <Input::Button @class="action" @value="Cancel" @onClick={{this.onCancel}}/>
         <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
       </Header.Actions>
     </Block::Backend::Header>

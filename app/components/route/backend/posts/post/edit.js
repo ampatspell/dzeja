@@ -10,6 +10,9 @@ export default class RouteBackendPostsPostEditComponent extends Component {
   @service
   router
 
+  @service
+  dialogs
+
   @reads('args.model')
   model
 
@@ -26,6 +29,12 @@ export default class RouteBackendPostsPostEditComponent extends Component {
 
   @action
   async onCancel() {
+    if(this.model.isDirty) {
+      let confirmed = await this.dialogs.alert('Are you sure you want to discard changes?', 'Discard changes', 'Keep editing');
+      if(!confirmed) {
+        return;
+      }
+    }
     this.withBusy(async () => {
       await this.model.reload();
       this.transitionBack();

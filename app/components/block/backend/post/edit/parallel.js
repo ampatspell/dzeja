@@ -2,8 +2,12 @@ import Component from '@glimmer/component';
 import { action } from "@ember/object"
 import { reads, alias } from 'macro-decorators';
 import { tracked } from "@glimmer/tracking";
+import { inject as service } from "@ember/service";
 
 export default class BlockBackendPostEditParallelComponent extends Component {
+
+  @service
+  dialogs
 
   @reads('args.post')
   post
@@ -33,7 +37,13 @@ export default class BlockBackendPostEditParallelComponent extends Component {
   //
 
   @action
-  removeColumn() {
+  async removeColumn() {
+    if(this.body) {
+      let confirmed = await this.dialogs.alert('Are you sure you want to remove this author?', 'Remove author', 'Cancel');
+      if(!confirmed) {
+        return;
+      }
+    }
     this.columns.removeObject(this.column);
   }
 

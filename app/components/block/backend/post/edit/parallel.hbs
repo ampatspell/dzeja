@@ -26,11 +26,7 @@
 
   {{#if this.canRemoveColumn}}
     <div class="row actions">
-      {{#if this.column.body}}
-        <Input::Button::Confirm @class="action" @value="Remove author" @confirmation="Remove author, sure?" @onClick={{fn this.removeColumn}}/>
-      {{else}}
-        <Input::Button @class="action" @value="Remove author" @onClick={{fn this.removeColumn}}/>
-      {{/if}}
+      <Input::Button @class="action" @value="Remove author" @onClick={{fn this.removeColumn}}/>
     </div>
   {{/if}}
 
