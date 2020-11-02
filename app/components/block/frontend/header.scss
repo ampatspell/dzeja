@@ -1,15 +1,33 @@
 .block-frontend-header {
   margin-bottom: 50px;
-  font-size: 32px;
   display: flex;
   flex-direction: row;
-  > a {
-    margin-right: 15px;
-    &:last-child {
-      margin-right: 0;
+  align-items: baseline;
+  > .content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    > a {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        text-decoration: none;
+      }
     }
-    &:hover {
-      text-decoration: none;
+  }
+  > .aside {
+    display: flex;
+    flex-direction: row;
+    > a {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      &:hover {
+        text-decoration: none;
+        opacity: 1;
+      }
     }
   }
 }
