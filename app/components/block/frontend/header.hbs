@@ -1,7 +1,7 @@
 <div class="block-frontend-header">
   <LinkTo @route="index">×</LinkTo>
   {{#if @backend}}
-    {{#if @backend.mode}}
+    {{#if @backend.model}}
       <LinkTo @route={{@backend.route}} @model={{@backend.model}}>→</LinkTo>
     {{else}}
       <LinkTo @route={{@backend.route}}>→</LinkTo>
