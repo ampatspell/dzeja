@@ -3,12 +3,41 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    match /user/{uid} {
+    function isSignedIn() {
+      return request.auth != null;
+    }
 
+    function hasRole(role) {
+      return isSignedIn() && request.auth.token.role == role;
+    }
+
+    function isEditor() {
+      return hasRole('editor');
+    }
+
+    function isUID(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    match /user/{uid} {
+      allow list: if false;
+      allow get: if isUID(uid);
+      allow create: if
+        isUID(uid) &&
+        isEditor() &&
+        request.resource.data.keys().toSet().hasOnly([ 'author' ]);
+      allow update: if
+        isUID(uid) &&
+        isEditor() &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly([ 'author' ]);
     }
 
     match /posts/{post} {
-
+      allow list: if true;
+      allow get: if true;
+      allow create: if isEditor();
+      allow update: if isEditor();
+      allow delete: if isEditor();
     }
 
   }
