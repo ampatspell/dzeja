@@ -1,0 +1,14 @@
+.block-frontend-post {
+  > .header {
+    > .meta {
+      font-size: 12px;
+    }
+    margin-bottom: 50px;
+  }
+  &.type-text {
+    > .content {
+      max-width: 800px;
+      @include markdown();
+    }
+  }
+}

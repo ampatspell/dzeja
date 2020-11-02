@@ -1,0 +1,7 @@
+<div class="header">
+  <div class="title">{{@post.title}}</div>
+  <div class="meta">{{@post.author}}, {{timestamp @post.createdAt}}</div>
+</div>
+<div class="content">
+  {{html-safe @post.renderedBody}}
+</div>
