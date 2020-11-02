@@ -1,15 +1,32 @@
 import EmberObject from '@ember/object';
 import { activate } from 'zuglet/decorators';
+import { inject as service } from "@ember/service"
+import { reads } from 'macro-decorators';
 
 export default class NewPostPage extends EmberObject {
+
+  @service
+  store
+
+  @reads('store.auth.user')
+  user
 
   posts
 
   definitions = [
-    { type: 'text', label: 'Text Post' },
-    { type: 'parallel', label: 'Parallel Post', build: () => ({
+    {
+      type: 'text',
+      label: 'Text Post',
+      build: ({ author }) => ({
+        author
+      })
+    },
+    {
+      type: 'parallel',
+      label: 'Parallel Post',
+      build: ({ author }) => ({
         columns: [
-          { author: '', body: '' }
+          { author, body: '' }
         ]
       })
     }
@@ -20,16 +37,11 @@ export default class NewPostPage extends EmberObject {
 
   definition = null;
 
-  // init() {
-  //   super.init(...arguments);
-  //   this.selectDefinition(this.definitions[1]);
-  // }
-
   selectDefinition(definition) {
     let post = null;
     if(definition) {
       let { type, build } = definition;
-      let props = build && build.call(this);
+      let props = build && build.call(this, this.user);
       post = this.posts.buildPost(type, props);
     }
     this.definition = definition;
