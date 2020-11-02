@@ -19,7 +19,7 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == uid;
     }
 
-    match /user/{uid} {
+    match /users/{uid} {
       allow list: if false;
       allow get: if isUID(uid);
       allow create: if
