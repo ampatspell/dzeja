@@ -1,6 +1,6 @@
 <div class="post">
   <div class="meta">
-    <div class="date">{{timestamp @post.createdAt}}</div>
+    <div class="date">{{timestamp @post.createdAt format="date"}}</div>
   </div>
   <div class="content">
     <LinkTo @route="posts.post" @model={{@post.id}} @class="title">
