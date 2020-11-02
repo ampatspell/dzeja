@@ -1,10 +1,10 @@
 <div class="block-frontend-header">
   <LinkTo @route="index">×</LinkTo>
-  {{#if @backend}}
-    {{#if @backend.model}}
-      <LinkTo @route={{@backend.route}} @model={{@backend.model}}>→</LinkTo>
+  {{#if this.backend}}
+    {{#if this.backend.model}}
+      <LinkTo @route={{this.backend.route}} @model={{this.backend.model}}>→</LinkTo>
     {{else}}
-      <LinkTo @route={{@backend.route}}>→</LinkTo>
+      <LinkTo @route={{this.backend.route}}>→</LinkTo>
     {{/if}}
   {{/if}}
 </div>
