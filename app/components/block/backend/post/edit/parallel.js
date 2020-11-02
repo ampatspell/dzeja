@@ -26,7 +26,7 @@ export default class BlockBackendPostEditParallelComponent extends Component {
   @reads('column.body')
   body
 
-  get canRemoveAuthor() {
+  get canRemoveColumn() {
     return this.columns.length > 1;
   }
 
