@@ -1,4 +1,6 @@
 import Store from 'zuglet/store';
+import { load } from 'zuglet/utils';
+import { activate } from 'zuglet/decorators';
 
 const options = {
   firebase: {
@@ -22,24 +24,16 @@ const options = {
   }
 };
 
-if(!options.firebase.projectId) {
-  // eslint-disable-next-line no-console
-  console.log([
-    '',
-    '🔥',
-    '',
-    'No Firebase config provided.',
-    'Get your Firebase project configuration from https://console.firebase.google.com/',
-    'and paste it in the `app/store.js`',
-    '',
-    ''
-  ].join('\n'));
-
-  throw new Error('No firebase config provided in app/store.js');
-}
-
 export default class DzejaStore extends Store {
 
   options = options
+
+  @activate().content(store => store.models.create('posts'))
+  posts
+
+  async load() {
+    await load(this.auth);
+    await this.posts.load();
+  }
 
 }

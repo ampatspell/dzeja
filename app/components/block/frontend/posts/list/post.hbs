@@ -1,0 +1,10 @@
+<div class="post">
+  <div class="meta">
+    <div class="date">{{timestamp @post.createdAt}}</div>
+  </div>
+  <div class="content">
+    <LinkTo @route="post" @model={{@post.id}} @class="title">
+      {{@post._title}}
+    </LinkTo>
+  </div>
+</div>

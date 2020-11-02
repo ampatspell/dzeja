@@ -1,17 +1,13 @@
 import Route from '@ember/routing/route';
-import { inject as service } from '@ember/service';
-import { route } from 'zuglet/decorators';
+import { inject as service } from "@ember/service"
 
-@route()
 export default class IndexRoute extends Route {
 
   @service
   store
 
   model() {
-  }
-
-  async load() {
+    return this.store;
   }
 
 }

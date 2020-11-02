@@ -1,0 +1,11 @@
+<Block::Frontend::Container @class="route-frontend-post" @backend={{hash route="backend.posts.post" model=@model.id}}>
+
+    <div class="header">
+      <div class="title">{{@model.title}}</div>
+      <div class="meta">{{@model.author}}, {{timestamp @model.createdAt}}</div>
+    </div>
+    <div class="content">
+      {{html-safe @model.renderedBody}}
+    </div>
+
+</Block::Frontend::Container>

@@ -1,0 +1,9 @@
+.block-frontend-header {
+  margin-bottom: 50px;
+  font-size: 32px;
+  > a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

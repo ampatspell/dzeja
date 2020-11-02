@@ -1,6 +1,9 @@
 @import "application";
+
 @import "backend";
 @import "backend/posts/index";
 @import "backend/posts/post/index";
 @import "backend/posts/post/edit";
 @import "backend/posts/new";
+
+@import "frontend/post";

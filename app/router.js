@@ -17,6 +17,9 @@ Router.map(function() {
     });
   });
 
+  this.route('post', { path: ':post_id' }, function() {
+  });
+
   this.route('dev');
 
 });

@@ -1,0 +1,3 @@
+<Block::Frontend::Container @class="route-frontend-index" @backend={{hash route="backend"}}>
+  <Block::Frontend::Posts::List @class="posts" @posts={{@model.posts.models}} @onSelected={{this.onPostSelected}}/>
+</Block::Frontend::Container>

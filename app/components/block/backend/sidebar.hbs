@@ -1,5 +1,6 @@
 <div class="block-backend-sidebar">
   <div class="content">
+    <Block::Backend::Sidebar::Item @icon="globe-europe" @onClick={{fn this.route "index"}}/>
     <Block::Backend::Sidebar::Item @icon="archive" @onClick={{fn this.route "backend.posts"}}/>
     <div class="delimiter"></div>
     <Block::Backend::Sidebar::Item @icon="laptop-code" @onClick={{this.toggleStats}}/>

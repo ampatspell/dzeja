@@ -1,0 +1,7 @@
+  <div class={{class "block-frontend-posts-list" @class}}>
+    {{#each @posts as |post|}}
+      <Block::Frontend::Posts::List::Post @post={{post}} @onSelected={{fn @onSelected post}}/>
+    {{else}}
+      <div class="placeholder">Nothing posted here yet</div>
+    {{/each}}
+  </div>

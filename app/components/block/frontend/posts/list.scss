@@ -1,0 +1,28 @@
+.block-frontend-posts-list {
+  > .post {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 15px;
+    > .meta {
+      width: 150px;
+      > .date {
+        font-size: $font-size-smaller;
+        text-transform: uppercase;
+      }
+    }
+    > .content {
+      > .title {
+        > a {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  > .placeholder {
+
+  }
+}

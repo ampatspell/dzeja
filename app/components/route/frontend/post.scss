@@ -1,0 +1,14 @@
+.route-frontend-post {
+  > .content {
+    > .header {
+      > .meta {
+        font-size: 12px;
+      }
+      margin-bottom: 50px;
+    }
+    > .content {
+      max-width: 800px;
+      @include markdown();
+    }
+  }
+}
