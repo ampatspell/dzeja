@@ -11,7 +11,9 @@ export default helper(function clazz(params, hash) {
 
   for(let key in hash) {
     let value = hash[key];
-    if(value) {
+    if(value === true) {
+      strings.push(key);
+    } else if(value) {
       strings.push(`${key}-${value}`);
     }
   }

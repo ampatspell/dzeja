@@ -8,17 +8,17 @@ export default class TextPost extends Post {
   @data('title')
   title
 
-  @data('authors')
-  authors
+  @data('columns')
+  columns
 
   get _title() {
     return this.title || 'Untitled';
   }
 
   async render() {
-    await this.authors.map(async author => {
-      let renderedBody = await toHTML(author.body);
-      author.renderedBody = renderedBody;
+    await this.columns.map(async column => {
+      let renderedBody = await toHTML(column.body);
+      column.renderedBody = renderedBody;
     });
   }
 

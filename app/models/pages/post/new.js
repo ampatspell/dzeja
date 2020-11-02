@@ -8,10 +8,8 @@ export default class NewPostPage extends EmberObject {
   definitions = [
     { type: 'text', label: 'Text Post' },
     { type: 'parallel', label: 'Parallel Post', build: () => ({
-        authors: [
-          { name: '', body: '' },
-          { name: '', body: '' },
-          { name: '', body: '' }
+        columns: [
+          { author: '', body: '' }
         ]
       })
     }

@@ -14,6 +14,9 @@ export default class TextPost extends Post {
   @data('renderedBody')
   renderedBody
 
+  @data('author')
+  author
+
   get _title() {
     return this.title || 'Untitled';
   }

@@ -1,0 +1,12 @@
+<div class={{class "block-backend-tabs" @class}}>
+  {{#if @label}}
+    <div class="label">{{@label}}</div>
+  {{/if}}
+  {{yield (hash
+    isTabs=true
+    Tab=(component 'block/backend/tabs/tab' selected=@selected onClick=@onSelect)
+  )}}
+  <div class="accessories">
+    {{yield (hash isAccessories=true)}}
+  </div>
+</div>

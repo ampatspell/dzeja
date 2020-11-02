@@ -18,11 +18,14 @@
   }
   &.type-parallel {
     > .content {
-      > .authors {
+      > .title {
+        font-weight: 600;
+      }
+      > .columns {
         margin-top: 15px;
         display: flex;
         flex-direction: row;
-        > .author {
+        > .column {
           flex: 1;
           margin: 0 5px;
           &:first-child {
@@ -31,7 +34,7 @@
           &:last-child {
             margin-right: 0;
           }
-          > .name {
+          > .author {
             font-weight: 600;
           }
           > .body {

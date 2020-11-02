@@ -2,13 +2,13 @@
   <div class="title">{{@post._title}}</div>
   <div class="meta">{{timestamp @post.createdAt}}</div>
 </div>
-<div class="authors">
-  {{#each @post.authors as |author|}}
-    <div class="author">
-      {{#if author.name}}
-        <div class="name">{{author.name}}</div>
+<div class="columns">
+  {{#each @post.columns as |column|}}
+    <div class="column">
+      {{#if column.name}}
+        <div class="author">{{column.name}}</div>
       {{/if}}
-      <div class="content">{{html-safe author.renderedBody}}</div>
+      <div class="content">{{html-safe column.renderedBody}}</div>
     </div>
   {{/each}}
 </div>
