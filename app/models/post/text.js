@@ -11,16 +11,16 @@ export default class TextPost extends Post {
   @data('body')
   body
 
-  @data('html')
-  html
+  @data('renderedBody')
+  renderedBody
 
   get _title() {
     return this.title || 'Untitled';
   }
 
   async render() {
-    let html = await toHTML(this.body);
-    this.update('html', html);
+    let renderedBody = await toHTML(this.body);
+    this.update('renderedBody', renderedBody);
   }
 
   get description() {

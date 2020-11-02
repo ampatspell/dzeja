@@ -2,14 +2,16 @@
 
   <Block::Backend::Header @title="Edit Post" as |Header|>
     <Header.Details @value={{@model.typeName}}/>
-    <Header.Actions>
-      {{#if @model.isDirty}}
-        <Input::Button::Confirm @class="action" @value="Cancel" @confirmation="Cancel, sure?" @onClick={{this.onCancel}}/>
-      {{else}}
-        <Input::Button @class="action" @value="Back" @onClick={{this.onCancel}}/>
-      {{/if}}
-      <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
-    </Header.Actions>
+    {{#unless this.isBusy}}
+      <Header.Actions>
+        {{#if @model.isDirty}}
+          <Input::Button::Confirm @class="action" @value="Cancel" @confirmation="Cancel, sure?" @onClick={{this.onCancel}}/>
+        {{else}}
+          <Input::Button @class="action" @value="Back" @onClick={{this.onCancel}}/>
+        {{/if}}
+        <Input::Button @class="action" @value="Save" @onClick={{this.onSave}}/>
+      </Header.Actions>
+    {{/unless}}
   </Block::Backend::Header>
 
   <Block::Backend::Post::Edit @post={{@model}} @onUpdate={{this.onUpdate}}/>
