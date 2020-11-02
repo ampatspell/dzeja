@@ -1,7 +1,13 @@
 .block-frontend-header {
   margin-bottom: 50px;
   font-size: 32px;
+  display: flex;
+  flex-direction: row;
   > a {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
     &:hover {
       text-decoration: none;
     }
