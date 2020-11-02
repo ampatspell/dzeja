@@ -1,0 +1,8 @@
+{{#if this.model}}
+  <div class="block-dialogs">
+    <div class="content">
+      {{component (concat 'block/dialogs/' this.model.type) model=this.model}}
+    </div>
+    <div class="overlay" role="button" {{on "click" this.cancel}}></div>
+  </div>
+{{/if}}
