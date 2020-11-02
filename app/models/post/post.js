@@ -1,7 +1,7 @@
 import EmberObject from '@ember/object';
-import { reads } from 'macro-decorators';
+import { reads, alias } from 'macro-decorators';
 
-export const data = key => reads(`doc.data.${key}`);
+export const data = key => alias(`doc.data.${key}`);
 
 export default class Post extends EmberObject {
 
@@ -23,10 +23,6 @@ export default class Post extends EmberObject {
   }
 
   //
-
-  update(key, value) {
-    this.doc.data[key] = value;
-  }
 
   async render() {
   }

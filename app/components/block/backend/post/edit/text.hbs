@@ -1,11 +1,11 @@
 <div class="row">
   <div class="label">Author</div>
-  <Input::Text @class="input" @value={{@post.author}} @onUpdate={{fn @onUpdate 'author'}}/>
+  <Input::Text @class="input" @value={{@post.author}}/>
 </div>
 <div class="row">
   <div class="label">Title</div>
-  <Input::Text @class="input" @value={{@post.title}} @onUpdate={{fn @onUpdate 'title'}}/>
+  <Input::Text @class="input" @value={{@post.title}}/>
 </div>
 <div class="row fill">
-  <Input::Textarea @class="input" @value={{@post.body}} @onUpdate={{fn @onUpdate 'body'}}/>
+  <Input::Textarea @class="input" @value={{@post.body}}/>
 </div>

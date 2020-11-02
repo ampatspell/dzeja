@@ -1,6 +1,6 @@
 <div class="row">
   <div class="label">Title</div>
-  <Input::Text @class="input" @value={{@post.title}} @onUpdate={{fn @onUpdate 'title'}}/>
+  <Input::Text @class="input" @value={{@post.title}}/>
 </div>
 
 <Block::Backend::Tabs @label="Authors" @onSelect={{this.selectColumn}} @selected={{this.column}} as |Tabs|>
@@ -17,11 +17,11 @@
 
   <div class="row">
     <div class="label">Author</div>
-    <Input::Text @class="input" @value={{this.author}} @onUpdate={{fn this.updateColumn 'author'}}/>
+    <Input::Text @class="input" @value={{this.author}}/>
   </div>
 
   <div class="row fill">
-    <Input::Textarea @class="input" @value={{this.body}} @onUpdate={{fn this.updateColumn 'body'}}/>
+    <Input::Textarea @class="input" @value={{this.body}}/>
   </div>
 
   {{#if this.canRemoveColumn}}
@@ -29,7 +29,7 @@
       {{#if this.column.body}}
         <Input::Button::Confirm @class="action" @value="Remove author" @confirmation="Remove author, sure?" @onClick={{fn this.removeColumn}}/>
       {{else}}
-        <Input::Button @class="action" @value="Remove" @onClick={{fn this.removeColumn}}/>
+        <Input::Button @class="action" @value="Remove author" @onClick={{fn this.removeColumn}}/>
       {{/if}}
     </div>
   {{/if}}
