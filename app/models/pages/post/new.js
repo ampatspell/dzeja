@@ -16,14 +16,14 @@ export default class NewPostPage extends EmberObject {
   definitions = [
     {
       type: 'text',
-      label: 'Text Post',
+      label: 'New Text Post',
       build: ({ author }) => ({
         author
       })
     },
     {
       type: 'parallel',
-      label: 'Parallel Post',
+      label: 'New Parallel Post',
       build: ({ author }) => ({
         columns: [
           { author, body: '' }

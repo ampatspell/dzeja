@@ -1,0 +1,15 @@
+.route-backend-user-index {
+  > .content {
+    padding: 15px;
+    > .row {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      > .label {
+        font-size: $font-size-smaller;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

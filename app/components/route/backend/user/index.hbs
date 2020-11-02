@@ -1,0 +1,15 @@
+<div class="route-backend-user-index">
+
+  <Block::Backend::Header @title={{@model.email}}/>
+
+  <div class="content">
+    <div class="row">
+      <div class="label">Your default author name</div>
+      <Input::Text @value={{@model.author}}/>
+    </div>
+    <div class="row">
+      <Input::Button @value="Save" @disabled={{not @model.isDirty}} @onClick={{this.save}}/>
+    </div>
+  </div>
+
+</div>

@@ -20,13 +20,13 @@ Router.map(function() {
         this.route('edit');
       });
     });
+    this.route('user', function() {
+    });
   });
 
   this.route('posts', function() {
     this.route('post', { path: ':post_id' }, function() {
     });
   });
-
-  this.route('dev');
 
 });

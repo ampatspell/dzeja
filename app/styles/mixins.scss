@@ -13,6 +13,9 @@
   outline: none;
   font-size: 14px;
   margin: 0;
+  &:disabled {
+    color: fade-out(#fff, 0.7);
+  }
 }
 
 @mixin input() {
