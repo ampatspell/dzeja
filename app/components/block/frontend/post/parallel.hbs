@@ -5,8 +5,8 @@
 <div class="columns">
   {{#each @post.columns as |column|}}
     <div class="column">
-      {{#if column.name}}
-        <div class="author">{{column.name}}</div>
+      {{#if column.author}}
+        <div class="author">{{column.author}}</div>
       {{/if}}
       <div class="content">{{html-safe column.renderedBody}}</div>
     </div>
