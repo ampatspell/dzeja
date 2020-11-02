@@ -3,6 +3,7 @@
   <Block::Backend::Header @class="header" @title={{concat @model.typeName}} as |Header|>
     <Header.Details @value={{concat 'Created at ' (timestamp @model.createdAt)}}/>
     <Header.Actions>
+      <Input::Button @class="action" @value="Preview" @onClick={{this.onPreview}}/>
       <Input::Button::Confirm @class="action" @value="Delete" @confirmation="Delete, sure?" @onClick={{this.onDelete}}/>
       <Input::Button @class="action" @value="Edit" @onClick={{this.onEdit}}/>
     </Header.Actions>
