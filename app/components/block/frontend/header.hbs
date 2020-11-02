@@ -11,9 +11,7 @@
   </div>
   {{#unless this.isSignedIn}}
     <div class="aside">
-      <LinkTo @class="sign-in" @route="backend">
-        <Block::Icon @name="rocket"/>
-      </LinkTo>
+      <LinkTo @class="sign-in" @route="backend">→</LinkTo>
     </div>
   {{/unless}}
 </div>
