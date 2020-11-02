@@ -23,10 +23,21 @@ export default class TextPost extends Post {
   }
 
   get description() {
-    let { _title } = this;
-    return [
-      { type: 'strong', value: _title }
-    ];
+    let { _title, columns } = this;
+    let lines = [ { type: 'strong', value: _title } ];
+    columns.forEach(({ author, body }) => {
+      if(author && body) {
+        let line = [];
+        if(author) {
+          line.push(author);
+        }
+        if(body) {
+          line.push(body);
+        }
+        lines.push({ value: line.join(': ') });
+      }
+    });
+    return lines;
   }
 
 }

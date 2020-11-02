@@ -2,14 +2,16 @@
   > .post {
     padding: 15px;
     border-bottom: 1px solid fade-out(#000, 0.9);
+
     > .description {
+      margin-bottom: 5px;
       > .line {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        margin-bottom: 5px;
         &.type-strong {
           font-weight: 600;
+          margin-bottom: 5px;
         }
       }
     }
