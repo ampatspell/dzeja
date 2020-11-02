@@ -1,5 +1,9 @@
 # dzeja
 
+```
+$ firebase functions:config:set users.admin="...uid..."
+```
+
 ## TODO
 
 - [ ] `store.user` which is set only if user has customClaims
