@@ -8,6 +8,11 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
 
+  this.route('session', function() {
+    this.route('new');
+    this.route('delete');
+  });
+
   this.route('backend', function() {
     this.route('posts', function() {
       this.route('new');

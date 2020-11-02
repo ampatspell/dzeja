@@ -1,0 +1,17 @@
+<Block::Frontend::Container @class="route-frontend-session-new">
+
+  <div class="form">
+
+    {{#if @model.error}}
+      <div class="row error">
+        {{@model.error.message}}
+      </div>
+    {{/if}}
+
+    <div class="row">
+      <Input::Button @value="Sign in" @disabled={{@mode.isBusy}} @onClick={{this.perform}}/>
+    </div>
+
+  </div>
+
+</Block::Frontend::Container>
