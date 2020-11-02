@@ -16,4 +16,30 @@
       }
     }
   }
+  &.type-parallel {
+    > .content {
+      > .authors {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: row;
+        > .author {
+          flex: 1;
+          margin: 0 5px;
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+          > .name {
+            font-weight: 600;
+          }
+          > .body {
+            margin-top: 15px;
+            @include markdown();
+          }
+        }
+      }
+    }
+  }
 }

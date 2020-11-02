@@ -6,7 +6,15 @@ export default class NewPostPage extends EmberObject {
   posts
 
   definitions = [
-    { type: 'text', label: 'Text Post' }
+    { type: 'text', label: 'Text Post' },
+    { type: 'parallel', label: 'Parallel Post', build: () => ({
+        authors: [
+          { name: '', body: '' },
+          { name: '', body: '' },
+          { name: '', body: '' }
+        ]
+      })
+    }
   ];
 
   @activate()
@@ -14,11 +22,17 @@ export default class NewPostPage extends EmberObject {
 
   definition = null;
 
+  // init() {
+  //   super.init(...arguments);
+  //   this.selectDefinition(this.definitions[1]);
+  // }
+
   selectDefinition(definition) {
     let post = null;
     if(definition) {
-      let { type } = definition;
-      post = this.posts.buildPost(type);
+      let { type, build } = definition;
+      let props = build && build.call(this);
+      post = this.posts.buildPost(type, props);
     }
     this.definition = definition;
     this.post = post;

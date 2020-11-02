@@ -4,6 +4,10 @@ import { activate, models } from 'zuglet/decorators';
 import { load } from 'zuglet/utils';
 import { cached } from 'tracked-toolbox';
 
+const {
+  assign
+} = Object;
+
 export default class Posts extends EmberObject {
 
   @service
@@ -28,11 +32,11 @@ export default class Posts extends EmberObject {
     return this.models.find(model => model.id === id);
   }
 
-  buildPost(type) {
-    let doc = this.collection.doc().new({
+  buildPost(type, props) {
+    let doc = this.collection.doc().new(assign({
       type,
       createdAt: this.store.serverTimestamp
-    });
+    }, props));
     return this.store.models.create(`post/${type}`, { doc });
   }
 
