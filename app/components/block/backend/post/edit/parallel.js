@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from "@ember/object"
-import { reads } from 'macro-decorators';
+import { reads, alias } from 'macro-decorators';
 import { tracked } from "@glimmer/tracking";
 
 export default class BlockBackendPostEditParallelComponent extends Component {
@@ -20,10 +20,10 @@ export default class BlockBackendPostEditParallelComponent extends Component {
     return column;
   }
 
-  @reads('column.author')
+  @alias('column.author')
   author
 
-  @reads('column.body')
+  @alias('column.body')
   body
 
   get canRemoveColumn() {
@@ -31,11 +31,6 @@ export default class BlockBackendPostEditParallelComponent extends Component {
   }
 
   //
-
-  @action
-  updateColumn(key, value) {
-    this.column[key] = value;
-  }
 
   @action
   removeColumn() {

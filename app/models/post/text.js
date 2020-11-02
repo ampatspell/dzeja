@@ -23,7 +23,7 @@ export default class TextPost extends Post {
 
   async render() {
     let renderedBody = await toHTML(this.body);
-    this.update('renderedBody', renderedBody);
+    this.renderedBody = renderedBody;
   }
 
   get description() {

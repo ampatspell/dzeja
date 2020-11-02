@@ -10,6 +10,9 @@ export default class BackendRoute extends Route {
     if(!this.store.auth.user) {
       this.transitionTo('session.new');
     }
+    if(!this.store.auth.user.isEditor) {
+      this.transitionTo('session.denied');
+    }
   }
 
 }

@@ -32,11 +32,6 @@ export default class RouteBackendPostsPostEditComponent extends Component {
     });
   }
 
-  @action
-  onUpdate(key, value) {
-    this.model.update(key, value);
-  }
-
   async withBusy(cb) {
     this.isBusy = true;
     try {

@@ -7,7 +7,8 @@ export default class BlockFrontendHeaderComponent extends Component {
   store
 
   get isSignedIn() {
-    return !!this.store.auth.user;
+    let user = this.store.auth.user;
+    return !!user && user.isEditor;
   }
 
   get backend() {

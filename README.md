@@ -1,7 +1,10 @@
 # dzeja
 
-## TODO
+```
+$ firebase functions:config:set users.admin="...uid..."
+```
 
-- [ ] `store.user` which is set only if user has customClaims
-- [ ] firestore security rules using customClaims
-- [ ] cloud function to set custom claims
+```
+$ npm run deploy:all
+$ npm run deploy:hosting
+```

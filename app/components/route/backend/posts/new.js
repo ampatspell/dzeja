@@ -13,11 +13,6 @@ export default class RouteBackendPostsNewComponent extends Component {
   }
 
   @action
-  onUpdate(key, value) {
-    this.args.model.update(key, value);
-  }
-
-  @action
   async onSave() {
     let { id } = await this.args.model.save();
     this.router.transitionTo('backend.posts.post', id);
