@@ -3,7 +3,7 @@
     <div class="date">{{timestamp @post.createdAt}}</div>
   </div>
   <div class="content">
-    <LinkTo @route="post" @model={{@post.id}} @class="title">
+    <LinkTo @route="posts.post" @model={{@post.id}} @class="title">
       {{@post._title}}
     </LinkTo>
   </div>
