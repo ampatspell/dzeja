@@ -18,7 +18,7 @@ export default class PostRoute extends Route {
   }
 
   async load(model) {
-    await (model && model.load());
+    await model.load();
   }
 
 }
