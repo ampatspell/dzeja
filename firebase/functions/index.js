@@ -14,7 +14,7 @@ const withValidatedAdmin = (context, cb) => {
     return error('not signed in');
   }
   if(config.users.admin !== context.auth.uid) {
-    return error(`${constext.auth.uid} is not admin`);
+    return error(`${context.auth.uid} is not admin`);
   }
   return cb();
 }
