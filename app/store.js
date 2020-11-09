@@ -1,6 +1,6 @@
 import Store from 'zuglet/store';
 import { load } from 'zuglet/utils';
-import { activate } from 'zuglet/decorators';
+import { model } from 'zuglet/decorators';
 
 const options = {
   firebase: {
@@ -28,7 +28,7 @@ export default class DzejaStore extends Store {
 
   options = options
 
-  @activate().content(store => store.models.create('posts'))
+  @model().named('posts')
   posts
 
   async load() {
