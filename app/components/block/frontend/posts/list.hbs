@@ -1,6 +1,8 @@
   <div class={{class "block-frontend-posts-list" @class}}>
-    {{#each @posts as |post|}}
-      <Block::Frontend::Posts::List::Post @post={{post}} @onSelected={{fn @onSelected post}}/>
+    {{#each (group-by @posts 'formattedCreatedAt') as |groups|}}
+      {{#each groups as |post idx|}}
+        <Block::Frontend::Posts::List::Post @post={{post}} @date={{eq idx 0}} @onSelected={{fn @onSelected post}}/>
+      {{/each}}
     {{else}}
       <div class="placeholder">Nothing posted here yet</div>
     {{/each}}

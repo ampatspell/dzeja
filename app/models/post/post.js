@@ -1,5 +1,6 @@
 import EmberObject from '@ember/object';
 import { reads, alias } from 'macro-decorators';
+import { formatTimestamp } from '../../utils/timestamp';
 
 export const data = key => alias(`doc.data.${key}`);
 
@@ -18,6 +19,10 @@ export default class Post extends EmberObject {
 
   @data('createdAt')
   createdAt
+
+  get formattedCreatedAt() {
+    return formatTimestamp(this.createdAt, 'date');
+  }
 
   async load() {
   }
