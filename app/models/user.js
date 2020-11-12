@@ -11,7 +11,7 @@ export default class DzejaUser extends User {
   @tracked
   role
 
-  @activate().mapping('uid').content(({ store, uid }) => store.doc(`users/${uid}`).existing())
+  @activate().content(({ store, uid }) => store.doc(`users/${uid}`).existing())
   doc
 
   @data('author')
