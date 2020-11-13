@@ -65,7 +65,7 @@
     "sass": "^1.29.0",
     "tracked-toolbox": "^1.2.1",
     "unified": "^9.2.0",
-    "zuglet": "git+ssh://git@github.com:ampatspell/zuglet-next.git#v2.3.5"
+    "zuglet": "git+ssh://git@github.com:ampatspell/zuglet-next.git#v2.3.7"
   },
   "engines": {
     "node": "10.* || >= 12"
