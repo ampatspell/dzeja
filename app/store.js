@@ -39,12 +39,12 @@ export default class DzejaStore extends Store {
   //
 
   async getRole(uid) {
-    let { data } = await store.functions.call('callable_user_getRole', { uid });
+    let { data } = await this.functions.call('callable_user_getRole', { uid });
     return data;
   }
 
   async setRole(uid, role) {
-    let { data } = await store.functions.call('callable_user_setRole', { uid, role });
+    let { data } = await this.functions.call('callable_user_setRole', { uid, role });
     return data;
   }
 
