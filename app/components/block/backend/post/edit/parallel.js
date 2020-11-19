@@ -9,6 +9,9 @@ export default class BlockBackendPostEditParallelComponent extends Component {
   @service
   dialogs
 
+  @service
+  store
+
   @reads('args.post')
   post
 
@@ -49,7 +52,8 @@ export default class BlockBackendPostEditParallelComponent extends Component {
 
   @action
   addColumn() {
-    this.columns.push({ author: '', body: '' });
+    let author = this.store.auth.user.author;
+    this.columns.push({ author, body: '' });
     this.selectColumn(this.columns.lastObject);
   }
 
