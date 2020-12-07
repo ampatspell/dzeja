@@ -13,7 +13,7 @@ export default class BlockFrontendHeaderComponent extends Component {
 
   get backend() {
     if(!this.isSignedIn) {
-      return;
+      return undefined;
     }
     return this.args.backend;
   }
