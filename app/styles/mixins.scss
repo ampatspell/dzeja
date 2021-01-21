@@ -39,4 +39,23 @@
   strong {
     font-weight: 600;
   }
+  hr {
+    $h: 18px;
+    display: block;
+    border: none;
+    margin: 20px 0;
+    position: relative;
+    height: $h;
+    &:after {
+      position: absolute;
+      content: "×××";
+      font-family: $font-family;
+      font-size: $h;
+      letter-spacing: 8px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: $h;
+    }
+  }
 }
