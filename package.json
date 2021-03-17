@@ -25,8 +25,8 @@
     "deploy:hosting": "npm run client:build && npm run firebase:deploy:hosting"
   },
   "devDependencies": {
-    "@ember/test-helpers": "^2.1.4",
     "@ember/optional-features": "^2.0.0",
+    "@ember/test-helpers": "^2.1.4",
     "@fortawesome/ember-fontawesome": "^0.2.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@glimmer/component": "^1.0.3",
@@ -44,7 +44,7 @@
     "ember-cli-sass": "^10.0.1",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.1",
-    "ember-cli-zuglet": "^2.4.15",
+    "ember-cli-zuglet": "^2.4.21",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.4",
     "ember-load-initializers": "^2.1.2",
